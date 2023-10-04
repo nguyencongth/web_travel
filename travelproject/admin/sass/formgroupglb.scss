@@ -1,0 +1,81 @@
+@import url(./utils.scss);
+
+.form {
+  &-group:not(.form-btn) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  &-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    & > button {
+      width: calc(50% - 5px);
+    }
+  }
+  &-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &-column {
+    width: calc(50% - 5px);
+  }
+  &-label {
+    margin-bottom: 10px;
+    &--select {
+      margin-bottom: 0;
+      color: #040404;
+      margin-right: 10px;
+      font-size: 18px;
+    }
+  }
+  &-file {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 10px;
+    background-color: rgba(0, 128, 0, 0.477);
+    position: relative;
+    & > label {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      inset: 0;
+      position: absolute;
+      margin-bottom: 0;
+      cursor: pointer;
+      & > i {
+        color: rgba(255, 0, 0, 0.622);
+        font-size: 30px;
+      }
+    }
+    & > input {
+      display: none;
+    }
+    & > span {
+      display: inline-block;
+      margin-left: 10rem;
+    }
+  }
+}
+
+input:not(input[type="file"]),
+textarea[name="packagedetails"] {
+  padding: 13px 26px;
+  width: 100%;
+  border: 2px solid #e6e8ec;
+  border-radius: 20px;
+}
+
+textarea[name="packagedetails"] {
+  resize: none;
+}
+
+select[name="selectitem"] {
+  border: 1px solid #8283c5;
+  padding: 5px;
+  border-radius: 5px;
+}

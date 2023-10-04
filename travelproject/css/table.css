@@ -1,0 +1,42 @@
+@import url(./utils.scss);
+table {
+  width: 100%;
+}
+
+table th,
+table td {
+  padding: 15px 30px;
+  text-align: left;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+table th {
+  color: #364d67;
+  font-weight: 600;
+  background-color: #f1f7fd;
+}
+
+table td {
+  background-color: white;
+}
+
+table tbody tr {
+  border-top: 1px solid #f0f4f8;
+}
+
+.sticky-table {
+  overflow: auto;
+  border: 1px solid #f0f4f8;
+}
+
+.sticky-table tbody td:first-child,
+.sticky-table thead th:first-child {
+  position: -webkit-sticky;
+  position: sticky;
+  left: 0;
+}
+
+.sticky-table tbody td:first-child span {
+  padding-right: 50px;
+}/*# sourceMappingURL=table.css.map */

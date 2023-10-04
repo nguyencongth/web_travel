@@ -1,0 +1,120 @@
+@import url(./utils.scss);
+
+.header {
+  padding-inline: 20px;
+  padding-block: 25px;
+  background-image: linear-gradient(to bottom right, #70e1f5, #ffd194);
+
+  &-top {
+    padding: 15px 20px;
+    background-image: linear-gradient(to bottom right, #4ca1af, #c4e0e5);
+
+    &__container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    &__list {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      margin-left: -30px;
+      margin-bottom: 0;
+      & > li:first-child {
+        font-size: 30px;
+        & > a > i {
+          color: green;
+        }
+      }
+    }
+    &__item {
+      margin-left: 30px;
+    }
+    &__link {
+      color: #000000;
+    }
+  }
+  &-info {
+    margin-left: auto;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    margin-bottom: 0;
+    & > li > a {
+      padding: 10px 24px 10px 24px;
+      border: 1px solid #131313;
+      border-radius: 20px;
+      color: #131313;
+    }
+  }
+
+  &-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0;
+    &:first-child {
+      & > li:first-child {
+        margin-right: 20px;
+      }
+    }
+  }
+  &-link {
+    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+    color: #131313;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 10px 24px 10px 24px;
+    border-radius: 22px;
+    border: 1px solid currentColor;
+    margin-right: 20px;
+    cursor: pointer;
+  }
+}
+
+.signup {
+  color: #ffffff;
+  background: #131313;
+}
+
+.navigation {
+  padding-block: 25px;
+  background-image: linear-gradient(to right, #ffedbe, #ffffe7);
+  &-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 25px;
+    margin-bottom: 0;
+  }
+  &-link {
+    color: #817382;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    &:hover {
+      color: #f95c19;
+    }
+  }
+  &-item:last-child {
+    & > a {
+      padding: 12px 20px;
+      border-radius: 5px;
+      background-color: #ffe4d9;
+      color: #f95c19;
+    }
+  }
+}

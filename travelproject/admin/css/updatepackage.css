@@ -1,0 +1,21 @@
+@import url(./utils.scss);
+.form-group__img + .form-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: unset;
+}
+.form-group__img + .form-group > img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.form-group__img + .form-group > a {
+  display: inline-block;
+  padding: 5px;
+  background-color: aquamarine;
+  border-radius: 5px;
+}
+.form-group__img + .form-group > label {
+  margin: unset;
+  margin-right: 10px;
+}/*# sourceMappingURL=updatepackage.css.map */

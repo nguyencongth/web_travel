@@ -1,0 +1,111 @@
+@import url(./utils.scss);
+
+.footer {
+  padding-block: 70px;
+  position: relative;
+  &-icon {
+    font-size: 20px;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    background-color: #393e46;
+    display: block;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 1px;
+  }
+  &-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 100px;
+    margin-bottom: 70px;
+  }
+  &-list {
+    padding: 0;
+    list-style: none;
+  }
+  &-item:not(:first-child) {
+    margin-bottom: 14px;
+  }
+  &-link {
+    text-decoration: none;
+    color: var(--gray3);
+    font-weight: 400;
+    font-size: 16px;
+  }
+  &-title {
+    font-size: 24px;
+    line-height: calc(36 / 24);
+    color: var(--gray2);
+    margin-bottom: 20px;
+  }
+  &-logo {
+    display: inline-block;
+    margin-bottom: 40px;
+  }
+  &-circle {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  &-desc {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: calc(24 / 16);
+    margin-bottom: 30px;
+  }
+  &-input {
+    position: relative;
+  }
+  &__item {
+    width: calc(24.5% - 75px);
+  }
+  &__item:first-child {
+    width: calc(26.5% - 75px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &-line {
+    background-color: #e6e8ec;
+    height: 1px;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  &-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 14px;
+  }
+  &-intro {
+    color: #b1b5c3;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: calc(20 / 14);
+    user-select: none;
+  }
+}
+
+.input-register {
+  padding-block: 13px;
+  padding-inline: 26px 50px;
+  width: 100%;
+  border: 2px solid #e6e8ec;
+  border-radius: 24px;
+  &::-webkit-input-placeholder {
+    color: #b1b5c4;
+    font-size: 16px;
+  }
+}

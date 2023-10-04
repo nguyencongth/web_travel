@@ -1,0 +1,54 @@
+.form {
+  &-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  &-container {
+    max-width: 500px;
+    margin: 50px auto;
+  }
+  &-title {
+    color: #353945;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: calc(60 / 40);
+    margin-bottom: 30px;
+  }
+
+  &-label {
+    margin-bottom: 10px;
+    min-width: 109px;
+  }
+  &-notification {
+    font-size: 30px;
+    color: rgb(32, 228, 32);
+  }
+  &-input,
+  textarea {
+    padding: 10px 20px;
+    width: 100%;
+    border: 2px solid #e6e8ec;
+    border-radius: 20px;
+  }
+}
+textarea {
+  resize: none;
+}
+
+.issue {
+  &-container {
+    max-width: 1170px;
+    margin: 4rem auto 5rem;
+  }
+}
+
+.tour {
+  &-container {
+    max-width: 1368px;
+    margin: 4rem auto 5rem;
+    overflow-x: auto;
+  }
+}

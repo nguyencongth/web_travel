@@ -1,0 +1,118 @@
+@import url(./utils.scss);
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500;600&display=swap');
+
+.header {
+  background-color: #f7f9fa;
+  border: 1px solid #e4e6e7;
+  border-radius: 8px 8px 0px 0px;
+  &-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 32px;
+  }
+  &-heading {
+    color: #3d474d;
+    font-size: 35px;
+    line-height: calc(30 / 35);
+    font-weight: bold;
+    margin-left: 100px;
+  }
+  &-action {
+    margin-inline: auto 20px;
+    border: 1px solid #cfcfcf;
+    padding: 8px;
+    border-radius: 10px;
+
+    &__link {
+      display: inline-block;
+      &:not(:first-child) {
+        margin-left: 11px;
+      }
+    }
+    &__icon {
+      font-size: 20px;
+      color: #3d474d;
+    }
+  }
+  &-admin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #c5ff75;
+    border-radius: 5px;
+    padding: 10px;
+    position: relative;
+    cursor: pointer;
+    &:hover .header-dropdown {
+      visibility: visible;
+      opacity: 1;
+      transition: all 0.3s linear;
+    }
+    & > i:first-child {
+      font-size: 25px;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 10px;
+      display: inline-block;
+      top: 100%;
+    }
+  }
+  &-info {
+    margin-inline: 15px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    & + i {
+      font-size: 20px;
+    }
+    &__title,
+    &__name {
+      font-size: 20px;
+      font-weight: 600;
+    }
+  }
+  &-dropdown {
+    position: absolute;
+    list-style: none;
+    top: 100%;
+    margin-top: 10px;
+    width: 100%;
+    background-color: #ffff;
+    box-shadow: 0 0 8px 1px rgb(0 0 0 / 11%);
+    border-radius: 5px;
+    padding-left: 0;
+    visibility: hidden;
+    opacity: 0;
+    &__item {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+      width: 100%;
+      cursor: pointer;
+      &:hover {
+        background-color: #fafafa;
+        color: #358fd8;
+        .header-dropdown__link,
+        .header-dropdown__icon {
+          color: #358fd8;
+        }
+      }
+    }
+    &__link {
+      color: #6e7177;
+      font-size: 20px;
+      font-weight: 700;
+    }
+    &__icon {
+      color: #4d5a5f;
+      margin-right: 10px;
+    }
+  }
+}

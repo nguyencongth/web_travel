@@ -1,0 +1,100 @@
+@import url(./utils.scss);
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500;600&display=swap");
+.navbar {
+  // position: fixed;
+  // top: 125px;
+  // bottom: 0;
+  // left: 0;
+  // width: calc(20% - 5px);
+  // z-index: 999;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border: 1px solid #e4e6e7;
+  padding-left: 32px;
+  background: #f7f9fa;
+  &-menu {
+    display: flex;
+    flex-direction: column;
+    row-gap: 28px;
+    align-items: flex-start;
+    &__link {
+      color: #3d474d;
+      font-size: 19px;
+      font-family: "Noto Sans", sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      & > i {
+        font-size: 26px;
+        max-width: 25px;
+      }
+    }
+    &__text {
+      margin-left: 15px;
+      display: inline-block;
+    }
+    &__item {
+      padding: 5px;
+      cursor: pointer;
+      border-left: 3px solid transparent;
+      transition: all 0.5s linear;
+      &:nth-child(2) {
+        position: relative;
+        & > .navbar-menu__link > span ~ i {
+          margin-left: 10px;
+        }
+        &:hover .navbar-dropdown {
+          opacity: 1;
+          visibility: visible;
+          transition: all 0.3s linear;
+          z-index: 999;
+        }
+        & > a > span {
+          margin-inline: 14px;
+        }
+      }
+      &:hover {
+        border-left-color: rgba(0, 0, 255, 0.185);
+        .navbar-icon {
+          color: cadetblue;
+        }
+        .navbar-menu__link {
+          color: #000000;
+          // transition: all 0.7s linear;
+        }
+      }
+    }
+  }
+  &-dropdown {
+    position: absolute;
+    left: 80%;
+    top: 5px;
+    list-style: none;
+    opacity: 0;
+    visibility: hidden;
+    &__item {
+      display: flex;
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.193);
+      border-radius: 5px;
+      margin-bottom: 5px;
+      &:hover {
+        .navbar-dropdown__link {
+          color: #000000;
+          transition: all 0.3s ease-in;
+        }
+        .navbar-dropdown__icon {
+          transition: all 0.3s ease-in;
+          color: cadetblue;
+        }
+      }
+    }
+    &__link {
+      min-width: 100px;
+      display: inline-block;
+      color: #3d474d;
+      font-size: 19px;
+      font-family: "Noto Sans", sans-serif;
+    }
+  }
+}
